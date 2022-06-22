@@ -6,7 +6,7 @@ actualmente el programa me permite elegir un mes de inicio y otro de finalizaci�
 el consumo mensual de cada uno y lo multiplica por valor=2 que sería el valor del kilowatt hora*/ 
 
 
-
+// cada variable representa el mes y el consumo en kwh//
 let eneroKwh=1000;
 let febreroKwh=2000;
 let marzoKwh=3000;
@@ -17,7 +17,7 @@ let junioKwh=6000;
 
 
 
-
+// con esta función le asigno a un número una variable para que el usuario elija el mes de inicio del cálculo//
 const inicio = () =>{
     let desdePeriodoKwh=parseInt(prompt("ingrese mes de inicio de periodo \n1)enero\n2)febrero\n3)marzo\n4)abril\n5)mayo\n6)junio"))
     switch (desdePeriodoKwh) {
@@ -36,7 +36,7 @@ const inicio = () =>{
         };
     };
 
-
+// con esta función le asigno a un número una variable para que el usuario elija el mes de finalización del cálculo//
     function fin(){
     let hastaPeriodoKwh=parseInt(prompt("ingrese mes de fin de periodo \n1)enero\n2)febrero\n3)marzo\n4)abril\n5)mayo\n6)junio"))
     switch (hastaPeriodoKwh) {
@@ -55,7 +55,8 @@ const inicio = () =>{
         
     };
     };
-   
+// Con esta función calculo el presupuesto, ya elejidos mes de inicio y fin, se suman los kwh de cada mes
+// y se multiplica por 2 que en este caso sería el valor del kwh//
     const presupuestoTotal=(a,b,c)=>{ 
     let presupuesto;
     if(inicio1==eneroKwh && fin1==eneroKwh){presupuesto=(eneroKwh)*valor}
@@ -70,7 +71,7 @@ const inicio = () =>{
     if(inicio1==febreroKwh && fin1==abrilKwh){presupuesto=(febreroKwh+marzoKwh+abrilKwh)*valor}
     if(inicio1==febreroKwh && fin1==mayoKwh){presupuesto=(febreroKwh+marzoKwh+abrilKwh+mayoKwh)*valor}
     if(inicio1==febreroKwh && fin1==junioKwh){presupuesto=(febreroKwh+marzoKwh+abrilKwh+mayoKwh+junioKwh)*valor};
-   
+
     if(inicio1==marzoKwh && fin1==marzoKwh){presupuesto=(marzoKwh)*valor}
     if(inicio1==marzoKwh && fin1==abrilKwh){presupuesto=(marzoKwh+abrilKwh)*valor}
     if(inicio1==marzoKwh && fin1==mayoKwh){presupuesto=(marzoKwh+abrilKwh+mayoKwh)*valor}
@@ -84,7 +85,7 @@ const inicio = () =>{
     if(inicio1==mayoKwh && fin1==junioKwh){presupuesto=(mayoKwh+junioKwh)*valor};
 
     if(inicio1==junioKwh && fin1==junioKwh){presupuesto=(junioKwh)*valor}
- 
+
     return presupuesto;
     };
     
